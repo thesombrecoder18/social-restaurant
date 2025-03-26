@@ -1,0 +1,44 @@
+/
+├── backend/                    
+│   ├── app.js                # Point d'entrée du serveur Express
+│   ├── db.js                 # Connexion MySQL (config)
+│   ├── routes.js             # Définition des routes API (peut être unique pour commencer)
+│   └── package.json          # Dépendances et scripts du backend
+│
+├── frontend/                   
+│   ├── public/               # Fichiers statiques (index.html, favicon, etc.)
+│   ├── src/                  
+│   │   ├── App.js            # Composant racine de l'application React
+│   │   ├── index.js          # Point d'entrée de React
+│   │   ├── components/       # Composants réutilisables (boutons, formulaires, etc.)
+│   │   └── pages/            # Pages principales (ex. Login, Dashboard, etc.)
+│   └── package.json          # Dépendances et scripts du frontend
+│
+├── .gitignore                # Fichiers/dossiers à ignorer (ex. node_modules, .env)
+└── README.md                 # Documentation de base du projet
+```
+
+---
+
+
+
+- **Backend**  
+  - **app.js** : Configure et démarre le serveur Express.  
+  - **db.js** : Contient la configuration de connexion à MySQL en utilisant `mysql2` ou `mysql`.  
+  - **routes.js** : Pour débuter, toutes les routes de ton API peuvent être définies dans un seul fichier (ex. gestion des utilisateurs, tickets, menus).  
+  - **package.json** : Gère les dépendances comme Express, mysql2, dotenv, etc.
+
+- **Frontend**  
+  - **public/index.html** : Le fichier HTML principal qui charge l’application React.  
+  - **src/index.js** : Point d'entrée de l’application React.  
+  - **src/App.js** : Composant principal qui définit la structure globale et les routes (via React Router par exemple).  
+  - **src/components/** et **src/pages/** : Organise tes composants et pages pour structurer l’interface (par exemple, une page de connexion, une page dashboard pour l’étudiant, une interface de scan pour l’agent, etc.).
+
+- **.gitignore**  
+  Liste les dossiers et fichiers à ne pas versionner (node_modules, fichiers de configuration sensibles, etc.).
+
+- **README.md**  
+  Fournit une documentation de base sur le projet (installation, configuration, usage).
+
+---
+
