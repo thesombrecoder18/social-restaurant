@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scanner QR Code - Agent Restaurant ESP</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="/" class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="4" width="20" height="16" rx="2"/>
+                        <path d="M7 15h0M2 9.5h20"/>
+                    </svg>
+                    <span>Agent Restaurant ESP</span>
+                </a>
+                
+                <div class="nav-links">
+                    <a href="scan.html" class="active">Scanner QR Code</a>
+                    <a href="historique.html">Historique</a>
+                    <a href="statistiques.html">Statistiques</a>
+                    
+                    <div class="nav-actions">
+                        <div class="dropdown">
+                            <button class="profile-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                                <span>Mon Compte</span>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="profile.html">Mon profil</a>
+                                <a href="settings.html">Paramètres</a>
+                                <hr>
+                                <a href="/logout" class="logout">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+                                        <polyline points="16 17 21 12 16 7"/>
+                                        <line x1="21" y1="12" x2="9" y2="12"/>
+                                    </svg>
+                                    <span>Déconnexion</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="scanner-container">
+                <div class="scanner-header">
+                    <h1>Scanner un QR Code</h1>
+                    <p>Scannez le QR Code de l'étudiant pour valider son ticket</p>
+                </div>
+
+                <div class="scanner-box">
+                    <div class="scanner-frame">
+                        <div class="scanner-overlay"></div>
+                        <div class="scanner-line"></div>
+                        <video id="scanner-video" autoplay playsinline></video>
+                    </div>
+                    <button class="scan-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 9V6a2 2 0 0 1 2-2h3"/>
+                            <path d="M19 6V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h9"/>
+                            <path d="M15 22v-4"/>
+                            <path d="M22 22v-4"/>
+                            <path d="M22 14a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v4"/>
+                            <path d="M18 14v4"/>
+                        </svg>
+                        Scanner
+                    </button>
+                </div>
+
+                <div class="recent-scans">
+                    <h2>Derniers scans</h2>
+                    <div class="scan-list">
+                        <div class="scan-item success">
+                            <div class="scan-info">
+                                <span class="student-name">Fatou Diop</span>
+                                <span class="scan-time">Il y a 2 minutes</span>
+                            </div>
+                            <div class="scan-status">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 6L9 17l-5-5"/>
+                                </svg>
+                                Validé
+                            </div>
+                        </div>
+
+                        <div class="scan-item success">
+                            <div class="scan-info">
+                                <span class="student-name">Amadou Sow</span>
+                                <span class="scan-time">Il y a 5 minutes</span>
+                            </div>
+                            <div class="scan-status">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 6L9 17l-5-5"/>
+                                </svg>
+                                Validé
+                            </div>
+                        </div>
+
+                        <div class="scan-item error">
+                            <div class="scan-info">
+                                <span class="student-name">Mariama Ba</span>
+                                <span class="scan-time">Il y a 8 minutes</span>
+                            </div>
+                            <div class="scan-status">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="18" y1="6" x2="6" y2="18"/>
+                                    <line x1="6" y1="6" x2="18" y2="18"/>
+                                </svg>
+                                Ticket invalide
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Profil - Agent Restaurant ESP</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="/" class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="4" width="20" height="16" rx="2"/>
+                        <path d="M7 15h0M2 9.5h20"/>
+                    </svg>
+                    <span>Agent Restaurant ESP</span>
+                </a>
+                
+                <div class="nav-links">
+                    <a href="/agent/scan">Scanner QR Code</a>
+                    <a href="/agent/historique">Historique</a>
+                    <a href="/agent/statistiques">Statistiques</a>
+                    
+                    <div class="nav-actions">
+                        <div class="dropdown">
+                            <button class="profile-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                                <span>Mon Compte</span>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="/agent/profile" class="active">Mon profil</a>
+                                <a href="/agent/settings">Paramètres</a>
+                                <hr>
+                                <a href="/logout" class="logout">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+                                        <polyline points="16 17 21 12 16 7"/>
+                                        <line x1="21" y1="12" x2="9" y2="12"/>
+                                    </svg>
+                                    <span>Déconnexion</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="profile-container">
+                <div class="profile-header">
+                    <div class="profile-cover"></div>
+                    <div class="profile-info">
+                        <div class="profile-avatar">MD</div>
+                        <div class="profile-details">
+                            <h1>Moussa Diallo</h1>
+                            <p>Agent de Restauration</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-content">
+                    <div class="profile-section">
+                        <h2>Informations Personnelles</h2>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <label>Nom complet</label>
+                                <p>Moussa Diallo</p>
+                            </div>
+                            <div class="info-item">
+                                <label>Email</label>
+                                <p>moussa.diallo@esp.sn</p>
+                            </div>
+                            <div class="info-item">
+                                <label>Téléphone</label>
+                                <p>+221 77 123 45 67</p>
+                            </div>
+                            <div class="info-item">
+                                <label>Matricule</label>
+                                <p>AG-2024-001</p>
+                            </div>
+                            <div class="info-item">
+                                <label>Service</label>
+                                <p>Restaurant Universitaire ESP</p>
+                            </div>
+                            <div class="info-item">
+                                <label>Date d'embauche</label>
+                                <p>15 Janvier 2024</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-section">
+                        <h2>Statistiques de Performance</h2>
+                        <div class="performance-grid">
+                            <div class="performance-card">
+                                <div class="performance-icon" style="background-color: var(--primary-light);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M20 6L9 17l-5-5"/>
+                                    </svg>
+                                </div>
+                                <div class="performance-info">
+                                    <h3>1,234</h3>
+                                    <p>Tickets validés ce mois</p>
+                                </div>
+                            </div>
+                            <div class="performance-card">
+                                <div class="performance-icon" style="background-color: var(--success-light);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2v20"/>
+                                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                                    </svg>
+                                </div>
+                                <div class="performance-info">
+                                    <h3>98.5%</h3>
+                                    <p>Taux de précision</p>
+                                </div>
+                            </div>
+                            <div class="performance-card">
+                                <div class="performance-icon" style="background-color: var(--warning-light);">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--warning)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12 6 12 12 16 14"/>
+                                    </svg>
+                                </div>
+                                <div class="performance-info">
+                                    <h3>45h</h3>
+                                    <p>Temps de service</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-section">
+                        <h2>Activité Récente</h2>
+                        <div class="activity-timeline">
+                            <div class="activity-item">
+                                <div class="activity-dot"></div>
+                                <div class="activity-content">
+                                    <p class="activity-time">Aujourd'hui, 14:30</p>
+                                    <p class="activity-text">Validation de 50 tickets pour le déjeuner</p>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-dot"></div>
+                                <div class="activity-content">
+                                    <p class="activity-time">Aujourd'hui, 12:15</p>
+                                    <p class="activity-text">Début du service de déjeuner</p>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-dot"></div>
+                                <div class="activity-content">
+                                    <p class="activity-time">Hier, 19:45</p>
+                                    <p class="activity-text">Fin du service du dîner - 75 tickets validés</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistiques - Agent Restaurant ESP</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stats.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="/" class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="4" width="20" height="16" rx="2"/>
+                        <path d="M7 15h0M2 9.5h20"/>
+                    </svg>
+                    <span>Agent Restaurant ESP</span>
+                </a>
+                
+                <div class="nav-links">
+                    <a href="/agent/scan">Scanner QR Code</a>
+                    <a href="/agent/historique">Historique</a>
+                    <a href="/agent/statistiques" class="active">Statistiques</a>
+                    
+                    <div class="nav-actions">
+                        <div class="dropdown">
+                            <button class="profile-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                                <span>Mon Compte</span>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="/agent/profile">Mon profil</a>
+                                <a href="/agent/settings">Paramètres</a>
+                                <hr>
+                                <a href="/logout" class="logout">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+                                        <polyline points="16 17 21 12 16 7"/>
+                                        <line x1="21" y1="12" x2="9" y2="12"/>
+                                    </svg>
+                                    <span>Déconnexion</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="stats-container">
+                <div class="stats-header">
+                    <h1>Statistiques</h1>
+                    <div class="stats-filters">
+                        <div class="filter-buttons">
+                            <button class="filter-button active">Aujourd'hui</button>
+                            <button class="filter-button">Cette semaine</button>
+                            <button class="filter-button">Ce mois</button>
+                            <button class="filter-button">Personnalisé</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-overview">
+                    <div class="stat-card large">
+                        <div class="stat-icon" style="background-color: var(--primary-light);">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 6L9 17l-5-5"/>
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <h3>1,234</h3>
+                            <p>Total des validations</p>
+                            <span class="stat-trend positive">+12.5% vs hier</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card large">
+                        <div class="stat-icon" style="background-color: var(--success-light);">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2v20"/>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <h3>98.5%</h3>
+                            <p>Taux de réussite</p>
+                            <span class="stat-trend positive">+2.3% vs hier</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-card large">
+                        <div class="stat-icon" style="background-color: var(--warning-light);">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--warning)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <h3>2.5s</h3>
+                            <p>Temps moyen de validation</p>
+                            <span class="stat-trend negative">+0.3s vs hier</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-details">
+                    <div class="stats-section">
+                        <h2>Répartition par type de repas</h2>
+                        <div class="stats-chart">
+                            <div class="chart-bar">
+                                <div class="bar-label">Petit-déjeuner</div>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 30%; background-color: var(--primary);">
+                                        <span>30%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chart-bar">
+                                <div class="bar-label">Déjeuner</div>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 45%; background-color: var(--success);">
+                                        <span>45%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chart-bar">
+                                <div class="bar-label">Dîner</div>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 25%; background-color: var(--warning);">
+                                        <span>25%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stats-section">
+                        <h2>Activité par heure</h2>
+                        <div class="activity-chart">
+                            <div class="hour-stats">
+                                <div class="hour-bar" style="height: 30%"></div>
+                                <span>6h</span>
+                            </div>
+                            <div class="hour-stats">
+                                <div class="hour-bar" style="height: 45%"></div>
+                                <span>7h</span>
+                            </div>
+                            <div class="hour-stats">
+                                <div class="hour-bar" style="height: 80%"></div>
+                                <span>8h</span>
+                            </div>
+                            <div class="hour-stats">
+                                <div class="hour-bar" style="height: 60%"></div>
+                                <span>9h</span>
+                            </div>
+                            <div class="hour-stats">
+                                <div class="hour-bar" style="height: 40%"></div>
+                                <span>10h</span>
+                            </div>
+                            <div class="hour-stats">
+                                <div class="hour-bar" style="height: 20%"></div>
+                                <span>11h</span>
+                            </div>
+                            <div class="hour-stats">
+                                <div class="hour-bar" style="height: 90%"></div>
+                                <span>12h</span>
+                            </div>
+                            <div class="hour-stats">
+                                <div class="hour-bar" style="height: 100%"></div>
+                                <span>13h</span>
+                            </div>
+                            <div class="hour-stats">
+                                <div class="hour-bar" style="height: 70%"></div>
+                                <span>14h</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

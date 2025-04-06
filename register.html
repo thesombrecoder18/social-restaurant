@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Restaurant ESP</title>
+    <link rel="stylesheet" href="auth.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="4" width="20" height="16" rx="2"/>
+                    <path d="M7 15h0M2 9.5h20"/>
+                </svg>
+                <h1>Restaurant ESP</h1>
+                <p>Inscription Étudiant</p>
+            </div>
+
+            <form class="auth-form">
+                <div class="form-group">
+                    <label for="student-id">Numéro étudiant</label>
+                    <input type="text" id="student-id" placeholder="Ex: 20230001" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Nom complet</label>
+                    <input type="text" id="name" placeholder="Prénom et Nom" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email institutionnel</label>
+                    <input type="email" id="email" placeholder="prenom.nom@esp.sn" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Confirmer le mot de passe</label>
+                    <input type="password" id="confirm-password" placeholder="••••••••" required>
+                </div>
+
+                <div class="form-options">
+                    <label class="checkbox-container">
+                        <input type="checkbox" required>
+                        <span class="checkmark"></span>
+                        J'accepte les conditions d'utilisation
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-primary">Créer mon compte</button>
+            </form>
+
+            <div class="auth-footer">
+                <p>Déjà inscrit ? <a href="/auth/login">Se connecter</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
